@@ -1,14 +1,13 @@
 GIT
-  remote: git://github.com/CultivateLabs/leather.git
-  revision: 184652b03b02d6691c1538e770624c634499a554
-  branch: master
+  remote: git://github.com/dvanderbeek/leather.git
+  revision: 72fc720dbc88431234ad89a210e855b0ca3ab01a
   specs:
-    leather (3.5.2)
-      bootstrap-sass (~> 3.3.7)
+    leather (3.5.1)
+      bootstrap-sass (~> 3.3.5)
       devise
       haml-rails
       high_voltage
-      rails (>= 4.0, < 5.1)
+      rails (>= 4.0)
 
 PATH
   remote: .
@@ -128,7 +127,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
     erubis (2.7.0)
     eventmachine (1.0.8)
     excon (0.54.0)
@@ -395,27 +394,27 @@ GEM
       trollop (~> 2.1)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
-    rspec (3.3.0)
-      rspec-core (~> 3.3.0)
-      rspec-expectations (~> 3.3.0)
-      rspec-mocks (~> 3.3.0)
-    rspec-core (3.3.2)
-      rspec-support (~> 3.3.0)
-    rspec-expectations (3.3.1)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.3.0)
-    rspec-mocks (3.3.2)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.3.0)
-    rspec-rails (3.3.3)
-      actionpack (>= 3.0, < 4.3)
-      activesupport (>= 3.0, < 4.3)
-      railties (>= 3.0, < 4.3)
-      rspec-core (~> 3.3.0)
-      rspec-expectations (~> 3.3.0)
-      rspec-mocks (~> 3.3.0)
-      rspec-support (~> 3.3.0)
-    rspec-support (3.3.0)
+      rspec-support (~> 3.6.0)
+    rspec-rails (3.6.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     sass (3.4.23)
@@ -488,8 +487,13 @@ DEPENDENCIES
   pry-nav
   pry-stack_explorer
   rb-fsevent
-  rspec-rails
+  rspec (~> 3.5)
+  rspec-core (~> 3.5)
+  rspec-rails (~> 3.5)
   spring (= 1.1.3)
   spring-commands-rspec
   storytime!
   thin
+
+BUNDLED WITH
+   1.14.6

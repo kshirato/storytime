@@ -14,4 +14,8 @@ gemspec
 # gem 'debugger'
 
 # gem 'storytime-admin', github: 'flyoverworks/storytime-admin', branch: 'dev'
-gem 'leather', github: 'CultivateLabs/leather', branch: 'master'
+#gem 'leather', github: 'CultivateLabs/leather', branch: 'master'
+gem "leather", github: "dvanderbeek/leather"
+gem "rspec", "~> 3.5"
+gem "rspec-core", "~> 3.5"
+gem "rspec-rails", "~> 3.5"
