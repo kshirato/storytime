@@ -27,6 +27,7 @@
 //= require jquery.fileupload.js
 //= require codemirror
 //= require codemirror/modes/xml
+//= require codemirror/modes/css
 //= require codemirror/modes/htmlmixed
 //= require codemirror/modes/overlay
 //= require codemirror/addons/fold/xml-fold
