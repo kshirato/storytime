@@ -17,6 +17,7 @@ module Storytime
         authorize @post
 
         if @post.save
+          @post.update(slug: @post.id) if params[:blog_post][:slug].blank? && @post.site.post_slug_style == "post_id"
           @post.create_autosave(post_params.slice(:draft_content)) if params[:preview] == "true"
 
           send_subscriber_notifications if @post.published? && post_params[:notifications_enabled] == "1"
