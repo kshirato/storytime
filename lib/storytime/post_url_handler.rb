@@ -28,7 +28,7 @@ module Storytime
           options[:id] = post
         when "post_id"
           options[:component_1] = "posts"
-          options[:id] = post.id
+          options[:id] = post
         end
       end
 
