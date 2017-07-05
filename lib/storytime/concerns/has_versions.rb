@@ -48,11 +48,11 @@ module Storytime
         if val == "1" || val == "true" || val == true
           if self.published_at_date || self.published_at_time
             self.published_at = if self.published_at_time.nil?
-              DateTime.parse "#{self.published_at_date}"
+              Time.zone.parse "#{self.published_at_date}"
             elsif self.published_at_date.nil?
-              DateTime.parse "#{Date.today} #{self.published_at_time}"
+              Time.zone.parse "#{Date.today} #{self.published_at_time}"
             else
-              DateTime.parse "#{self.published_at_date} #{self.published_at_time}"
+              Time.zone.parse "#{self.published_at_date} #{self.published_at_time}"
             end
           else
             self.published_at = Time.now unless self.published_at
