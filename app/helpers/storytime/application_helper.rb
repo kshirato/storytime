@@ -21,7 +21,7 @@ module Storytime
 
     def active_nav_item_class(controller, type = nil)
       return if ["storytime/pages", "storytime/posts"].include? params[:controller]
-      
+
       current_controller = params[:controller].split("/").last
 
       'class="active"'.html_safe if controller == current_controller
@@ -44,8 +44,8 @@ module Storytime
       resource_name = resource.class.to_s.downcase.split("::").last
 
       opts = {
-        id: "delete_#{resource_name}_#{resource.id}", 
-        class: "btn btn-danger btn-outline btn-xs btn-delete-resource delete-#{resource_name}-button", 
+        id: "delete_#{resource_name}_#{resource.id}",
+        class: "btn btn-danger btn-outline btn-xs btn-delete-resource delete-#{resource_name}-button",
         data: { confirm: I18n.t('common.are_you_sure_you_want_to_delete', resource_name: humanized_resource_name), resource_id: resource.id, resource_type: resource_name },
         method: :delete
       }
@@ -53,10 +53,10 @@ module Storytime
       if remote
         opts[:remote] = true
       end
-      
+
       link_to content_tag(:i, "", class: "icon-st-icons-trash"), href || resource, opts
     end
-    
+
     def tag_cloud(tags, classes)
       max = tags.sort_by(&:count).last
       tags.each do |tag|
@@ -98,6 +98,10 @@ module Storytime
       else
         super
       end
+    end
+
+    def generate_hash(text)
+      Digest::MD5.hexdigest(text + Storytime.hash_salt)
     end
 
   end

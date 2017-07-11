@@ -11,7 +11,10 @@ module Storytime
         Post.published.friendly.find(params[:id])
       end
 
-      authorize @post
+      #Skip if draft preview
+      unless params[:preview].present? && (view_context.generate_hash(@post.title) == params[:preview])
+        authorize @post
+      end
       
       content_for :title, "#{@current_storytime_site.title} | #{@post.title}"
 
