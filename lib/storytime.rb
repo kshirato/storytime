@@ -115,6 +115,10 @@ module Storytime
   mattr_accessor :application_controller_superclass
   @@application_controller_superclass = "::ApplicationController"
 
+  # Hash salt
+  mattr_accessor :hash_salt
+  @@hash_salt = "storytime"
+
   class << self
     attr_accessor :layout, :media_storage, :s3_bucket, :post_types
 
