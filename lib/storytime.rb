@@ -62,9 +62,8 @@ module Storytime
       attributes = Loofah::HTML5::WhiteList::ALLOWED_ATTRIBUTES
     end
 
-    tags << "style"
-    tags << "iframe"
-    attributes << "style"
+    tags.merge(ENV['STORYTIME_WHITE_LIST_TAGS'].split(",")) unless ENV['STORYTIME_WHITE_LIST_TAGS'].nil?
+    attributes.merge(ENV['STORYTIME_WHITE_LIST_ATTRIBUTES'].split(",")) unless ENV['STORYTIME_WHITE_LIST_ATTRIBUTES'].nil?
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
   end
