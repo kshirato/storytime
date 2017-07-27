@@ -13,7 +13,7 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-# gem 'storytime-admin', github: 'flyoverworks/storytime-admin', branch: 'dev'
+gem 'storytime-admin', github: 'kshirato/storytime-admin', branch: 'dev'
 #gem 'leather', github: 'CultivateLabs/leather', branch: 'master'
 gem "leather", github: "dvanderbeek/leather"
 gem "rspec", "~> 3.5"
